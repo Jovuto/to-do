@@ -1,5 +1,6 @@
 let toDoObjectList = [];
 let completedToDos = [];
+const priorities = ["low", "medium", "high"];
 
 class toDoManager {
 
@@ -15,6 +16,10 @@ class toDoManager {
 
     static changeDescription(number, description) {
         toDoObjectList[number].description = description;
+    }
+
+    static changePriority(toDoNumber, priorityNumber) {
+        toDoObjectList[toDoNumber].priority = priorities[priorityNumber];
     }
     
 }

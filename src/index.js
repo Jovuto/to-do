@@ -7,3 +7,7 @@ class toDo {
         this.checklist = checklist;
     }
 }
+
+function createToDo(title) {
+    return new toDo(title);
+}

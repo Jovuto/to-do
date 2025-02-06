@@ -12,6 +12,10 @@ class toDoManager {
         completedToDos.push(toDoObjectList[number]);
         toDoObjectList.splice(number, 1);
     }
+
+    static changeDescription(number, description) {
+        toDoObjectList[number].description = description;
+    }
     
 }
 
@@ -25,5 +29,3 @@ class toDo {
         this.complete = false;
     }
 }
-
-window.createToDo = toDoManager.createToDo;

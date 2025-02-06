@@ -1,3 +1,13 @@
+let toDoObjectList = [];
+
+class toDoManager {
+
+    static createToDo(title) {
+        toDoObjectList.push(new toDo(title));
+    }
+    
+}
+
 class toDo {
     constructor(title, description, dueDate, priority, checklist) {
         this.title = title;
@@ -8,6 +18,4 @@ class toDo {
     }
 }
 
-function createToDo(title) {
-    return new toDo(title);
-}
+window.createToDo = toDoManager.createToDo;
